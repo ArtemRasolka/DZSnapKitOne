@@ -9,14 +9,7 @@ import UIKit
 import SnapKit
 
 class ViewCenter: UIView {
-
-    let viewCenter: UIView = {
-        let view = UIView()
-        view.backgroundColor = .gray
-        view.layer.cornerRadius = 10
-        return view
-    }()
-
+    
     let labelAtViewCenter: UILabel = {
         let label = UILabel()
         label.text = "Notes:"
@@ -26,12 +19,12 @@ class ViewCenter: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.frame = CGRect(x: 10, y: 175, width: 410, height: 670)
+        self.backgroundColor = .gray
+        self.layer.cornerRadius = 10
         addSubview(labelAtViewCenter)
-        addSubview(viewCenter)
-        viewCenter.addSubview(labelAtViewCenter)
         
         setupLabel()
-        setupViewCenter()
     }
     
     required init?(coder: NSCoder) {
@@ -43,16 +36,6 @@ class ViewCenter: UIView {
             make.left.equalToSuperview().inset(20)
             make.height.equalTo(20)
             make.top.equalTo(10)
-        }
-    }
-    
-    func setupViewCenter() {
-        viewCenter.snp.makeConstraints { make in
-            make.height.equalTo(670)
-            make.width.equalTo(408)
-            make.left.equalToSuperview().inset(10)
-            make.right.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(180)
         }
     }
     

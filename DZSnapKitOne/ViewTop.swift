@@ -13,7 +13,7 @@ class ViewTop: UIView {
     let image: UIImageView = {
         let image = UIImageView(image: UIImage(named: "flowers"))
         image.contentMode = .scaleToFill
-        image.layer.cornerRadius = 60
+        image.layer.cornerRadius = 55
         image.layer.masksToBounds = true
         return image
     }()
@@ -60,6 +60,7 @@ class ViewTop: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.frame = CGRect(x: 10, y: 0, width: 410, height: 170)
         addSubview(image)
         addSubview(labelFirst)
         addSubview(labelMiddle)
@@ -83,10 +84,9 @@ class ViewTop: UIView {
     
     func setupImage() {
         image.snp.makeConstraints { make in
-            make.height.equalTo(120)
-            make.width.equalTo(120)
+            make.height.equalTo(110)
+            make.width.equalTo(110)
             make.left.equalToSuperview().inset(10)
-            make.bottom.equalToSuperview().inset(10)
             make.top.equalToSuperview().inset(50)
             
         }
@@ -97,8 +97,7 @@ class ViewTop: UIView {
             make.height.equalTo(20)
             make.width.equalTo(60)
             make.left.equalTo(image.snp.right).inset(-10)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(60)
+            make.top.equalToSuperview().inset(55)
             
         }
     }
@@ -108,8 +107,7 @@ class ViewTop: UIView {
             make.height.equalTo(20)
             make.width.equalTo(60)
             make.left.equalTo(image.snp.right).inset(-10)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(100)
+            make.top.equalToSuperview().inset(95)
         }
     }
     
@@ -118,38 +116,32 @@ class ViewTop: UIView {
             make.height.equalTo(20)
             make.width.equalTo(60)
             make.left.equalTo(image.snp.right).inset(-10)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(140)
+//            make.bottom.equalToSuperview().inset(10)
+            make.top.equalToSuperview().inset(135)
         }
     }
     
     func setupFirstTextField() {
         firstTextField.snp.makeConstraints { make in
-            make.height.equalTo(30)
             make.width.equalTo(210)
             make.left.equalTo(labelFirst.snp.right).inset(-5)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(55)
+            make.top.equalToSuperview().inset(50)
         }
     }
     
     func setupMiddleTextField() {
         middleTextField.snp.makeConstraints { make in
-            make.height.equalTo(30)
             make.width.equalTo(210)
             make.left.equalTo(labelFirst.snp.right).inset(-5)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(95)
+            make.top.equalToSuperview().inset(90)
         }
     }
     
     func setupLastTextField() {
         lastTextField.snp.makeConstraints { make in
-            make.height.equalTo(30)
             make.width.equalTo(210)
             make.left.equalTo(labelFirst.snp.right).inset(-5)
-            make.bottom.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(135)
+            make.top.equalToSuperview().inset(130)
         }
     }
 }
