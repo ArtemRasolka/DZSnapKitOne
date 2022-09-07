@@ -61,6 +61,7 @@ class ViewTop: UIView {
         super.init(frame: frame)
         
         self.frame = CGRect(x: 10, y: 0, width: 410, height: 170)
+        
         addSubview(image)
         addSubview(labelFirst)
         addSubview(labelMiddle)
@@ -76,6 +77,7 @@ class ViewTop: UIView {
         setupFirstTextField()
         setupMiddleTextField()
         setupLastTextField()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -116,7 +118,6 @@ class ViewTop: UIView {
             make.height.equalTo(20)
             make.width.equalTo(60)
             make.left.equalTo(image.snp.right).inset(-10)
-//            make.bottom.equalToSuperview().inset(10)
             make.top.equalToSuperview().inset(135)
         }
     }

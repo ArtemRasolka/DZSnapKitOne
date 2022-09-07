@@ -10,7 +10,9 @@ import SnapKit
 
 class ViewCenter: UIView {
     
-    let labelAtViewCenter: UILabel = {
+    var viewTop = ViewTop()
+    
+    var labelAtViewCenter: UILabel = {
         let label = UILabel()
         label.text = "Notes:"
         return label
@@ -20,11 +22,13 @@ class ViewCenter: UIView {
         super.init(frame: frame)
         
         self.frame = CGRect(x: 10, y: 175, width: 410, height: 670)
+        
         self.backgroundColor = .gray
         self.layer.cornerRadius = 10
         addSubview(labelAtViewCenter)
         
         setupLabel()
+
     }
     
     required init?(coder: NSCoder) {

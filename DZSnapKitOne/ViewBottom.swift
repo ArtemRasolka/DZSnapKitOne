@@ -9,9 +9,10 @@ import UIKit
 import SnapKit
 
 class ViewBottom: UIView {
+   
+      var viewCenter = ViewCenter()
+      var viewTop = ViewTop()
     
-    var viewTop = ViewTop()
-
     let buttonSave: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Save", for: .normal)
@@ -36,7 +37,8 @@ class ViewBottom: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.frame = CGRect(x: 10, y: 820, width: 410, height: 100)
+        self.frame = CGRect(x: 10, y: 850, width: 410, height: 70)
+        
         addSubview(buttonSave)
         addSubview(buttonCancel)
         addSubview(buttonClear)
@@ -45,6 +47,7 @@ class ViewBottom: UIView {
         setupButtonCancel()
         setupButtonClear()
         
+       
     }
     
     required init?(coder: NSCoder) {
@@ -54,35 +57,39 @@ class ViewBottom: UIView {
     func setupButtonSave() {
         buttonSave.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(30)
-            make.top.equalTo(50)
+            make.top.equalTo(20)
         }
     }
     
     func setupButtonCancel() {
         buttonCancel.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(180)
-            make.top.equalTo(50)
+            make.top.equalTo(20)
         }
     }
     
     func setupButtonClear() {
         buttonClear.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(330)
-            make.top.equalTo(50)
+            make.top.equalTo(20)
         }
     }
     
     @objc func actionButtonSave(_ sender: UIButton) {
         print("Save button tapped!")
-    
+
+        let message = Notification.init(name: .customNotification, object: nil, userInfo: [1 : self])
+        NotificationCenter.default.post(message)
+        
     }
-    
+
     @objc func actionButtonCancel(_ sender: UIButton) {
         print("Cancel button tapped!")
+        
     }
-    
+
     @objc func actionButtonClear(_ sender: UIButton) {
         print("Clear button tapped!")
+        
     }
-    
 }
