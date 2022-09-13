@@ -28,9 +28,6 @@ class ViewController: UIViewController {
             
             self.text = self.viewCenter.labelAtViewCenter.text ?? ""
             self.text = notification.name.rawValue
-//            self.textField = self.viewTop.firstTextField.text ?? ""
-//
-//           return self.text = self.textField
         }
     }
 }
