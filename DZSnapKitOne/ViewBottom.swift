@@ -9,9 +9,9 @@ import UIKit
 import SnapKit
 
 class ViewBottom: UIView {
-   
-      var viewCenter = ViewCenter()
-      var viewTop = ViewTop()
+    
+    var viewCenter = ViewCenter()
+    var viewTop = ViewTop()
     
     let buttonSave: UIButton = {
         let button = UIButton(type: .system)
@@ -33,7 +33,7 @@ class ViewBottom: UIView {
         button.addTarget(self, action: #selector(actionButtonClear(_:)), for: .touchUpInside)
         return button
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -47,7 +47,7 @@ class ViewBottom: UIView {
         setupButtonCancel()
         setupButtonClear()
         
-       
+        
     }
     
     required init?(coder: NSCoder) {
@@ -79,12 +79,12 @@ class ViewBottom: UIView {
         print("Save button tapped!")
         
     }
-
+    
     @objc func actionButtonCancel(_ sender: UIButton) {
         print("Cancel button tapped!")
         
     }
-
+    
     @objc func actionButtonClear(_ sender: UIButton) {
         print("Clear button tapped!")
         

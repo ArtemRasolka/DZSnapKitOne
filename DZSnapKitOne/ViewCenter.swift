@@ -28,7 +28,7 @@ class ViewCenter: UIView {
         addSubview(labelAtViewCenter)
         
         setupLabel()
-
+        
     }
     
     required init?(coder: NSCoder) {

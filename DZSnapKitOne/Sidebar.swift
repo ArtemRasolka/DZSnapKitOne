@@ -20,7 +20,7 @@ class Sidebar: UIView {
         button.clipsToBounds = true
         return button
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -40,8 +40,13 @@ class Sidebar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-   @objc func actionButtonOk(_sender: UIButton) {
-       self.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-    
+    @objc func actionButtonOk(_sender: UIButton) {
+        buttonOk.backgroundColor = .clear
+        buttonOk.setTitleColor(UIColor.clear, for: .normal)
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            UIView.animate(withDuration: 0.5) {
+                self.frame = CGRect(x: -400, y: 350, width: 150, height: 150)
+            }
+        }
     }
 }
