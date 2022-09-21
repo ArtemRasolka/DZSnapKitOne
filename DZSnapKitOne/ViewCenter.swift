@@ -42,6 +42,5 @@ class ViewCenter: UIView {
             make.top.equalTo(10)
         }
     }
-    
 }
 

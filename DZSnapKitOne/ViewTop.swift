@@ -9,6 +9,13 @@ import UIKit
 import SnapKit
 
 class ViewTop: UIView {
+    
+    let buttonBurger: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("", for: .normal)
+        button.addTarget(self, action: #selector(actionButtonBurger(_:)), for: .touchUpInside)
+        return button
+    }()
 
     let image: UIImageView = {
         let image = UIImageView(image: UIImage(named: "flowers"))
@@ -62,6 +69,7 @@ class ViewTop: UIView {
         
         self.frame = CGRect(x: 10, y: 0, width: 410, height: 170)
         
+        addSubview(buttonBurger)
         addSubview(image)
         addSubview(labelFirst)
         addSubview(labelMiddle)
@@ -77,6 +85,7 @@ class ViewTop: UIView {
         setupFirstTextField()
         setupMiddleTextField()
         setupLastTextField()
+        setupButtonBurger()
         
     }
     
@@ -144,6 +153,20 @@ class ViewTop: UIView {
             make.left.equalTo(labelFirst.snp.right).inset(-5)
             make.top.equalToSuperview().inset(130)
         }
+    }
+    
+    func setupButtonBurger(){
+        buttonBurger.snp.makeConstraints { make in
+            make.centerX.equalTo(image.snp.centerX)
+            make.centerY.equalTo(image.snp.centerY)
+            make.height.equalTo(110)
+            make.width.equalTo(110)
+        }
+    }
+    
+    @objc func actionButtonBurger(_ sender: UIButton) {
+        print("Hello")
+        
     }
 }
 

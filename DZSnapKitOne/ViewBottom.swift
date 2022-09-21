@@ -77,9 +77,6 @@ class ViewBottom: UIView {
     
     @objc func actionButtonSave(_ sender: UIButton) {
         print("Save button tapped!")
-
-        let message = Notification.init(name: .customNotification, object: nil, userInfo: [1 : self])
-        NotificationCenter.default.post(message)
         
     }
 

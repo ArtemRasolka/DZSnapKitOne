@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		22F04958303EDB72199BA466 /* Pods_DZSnapKitOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3952449A627E83EA3E1ACFD8 /* Pods_DZSnapKitOne.framework */; };
-		842615DA28C5A49B00DA818A /* ViewTopDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842615D928C5A49B00DA818A /* ViewTopDelegate.swift */; };
-		842615DC28C5F3F000DA818A /* Extesion+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842615DB28C5F3F000DA818A /* Extesion+Notification.swift */; };
 		84A8B37528C21270008D5A8C /* ViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8B37428C21270008D5A8C /* ViewTop.swift */; };
 		84A8B37728C2127F008D5A8C /* ViewCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8B37628C2127F008D5A8C /* ViewCenter.swift */; };
 		84A8B37928C2128D008D5A8C /* ViewBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8B37828C2128D008D5A8C /* ViewBottom.swift */; };
+		84C1366728DAF5EC008C2661 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1366628DAF5EC008C2661 /* Sidebar.swift */; };
 		84C3F55128C2114300DAA064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3F55028C2114300DAA064 /* AppDelegate.swift */; };
 		84C3F55328C2114300DAA064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3F55228C2114300DAA064 /* SceneDelegate.swift */; };
 		84C3F55528C2114300DAA064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3F55428C2114300DAA064 /* ViewController.swift */; };
@@ -25,11 +24,10 @@
 		3952449A627E83EA3E1ACFD8 /* Pods_DZSnapKitOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DZSnapKitOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7255A29C3AC1C24D2BF7EF /* Pods-DZSnapKitOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZSnapKitOne.release.xcconfig"; path = "Target Support Files/Pods-DZSnapKitOne/Pods-DZSnapKitOne.release.xcconfig"; sourceTree = "<group>"; };
 		5417E649071D92C550C885BE /* Pods-DZSnapKitOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZSnapKitOne.debug.xcconfig"; path = "Target Support Files/Pods-DZSnapKitOne/Pods-DZSnapKitOne.debug.xcconfig"; sourceTree = "<group>"; };
-		842615D928C5A49B00DA818A /* ViewTopDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTopDelegate.swift; sourceTree = "<group>"; };
-		842615DB28C5F3F000DA818A /* Extesion+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extesion+Notification.swift"; sourceTree = "<group>"; };
 		84A8B37428C21270008D5A8C /* ViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTop.swift; sourceTree = "<group>"; };
 		84A8B37628C2127F008D5A8C /* ViewCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCenter.swift; sourceTree = "<group>"; };
 		84A8B37828C2128D008D5A8C /* ViewBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBottom.swift; sourceTree = "<group>"; };
+		84C1366628DAF5EC008C2661 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		84C3F54D28C2114300DAA064 /* DZSnapKitOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZSnapKitOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3F55028C2114300DAA064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3F55228C2114300DAA064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +85,7 @@
 				84A8B37428C21270008D5A8C /* ViewTop.swift */,
 				84A8B37628C2127F008D5A8C /* ViewCenter.swift */,
 				84A8B37828C2128D008D5A8C /* ViewBottom.swift */,
-				842615D928C5A49B00DA818A /* ViewTopDelegate.swift */,
-				842615DB28C5F3F000DA818A /* Extesion+Notification.swift */,
+				84C1366628DAF5EC008C2661 /* Sidebar.swift */,
 				84C3F55628C2114300DAA064 /* Main.storyboard */,
 				84C3F55928C2114900DAA064 /* Assets.xcassets */,
 				84C3F55B28C2114900DAA064 /* LaunchScreen.storyboard */,
@@ -225,10 +222,9 @@
 				84C3F55128C2114300DAA064 /* AppDelegate.swift in Sources */,
 				84A8B37528C21270008D5A8C /* ViewTop.swift in Sources */,
 				84A8B37728C2127F008D5A8C /* ViewCenter.swift in Sources */,
-				842615DA28C5A49B00DA818A /* ViewTopDelegate.swift in Sources */,
 				84C3F55328C2114300DAA064 /* SceneDelegate.swift in Sources */,
+				84C1366728DAF5EC008C2661 /* Sidebar.swift in Sources */,
 				84A8B37928C2128D008D5A8C /* ViewBottom.swift in Sources */,
-				842615DC28C5F3F000DA818A /* Extesion+Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
